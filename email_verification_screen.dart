@@ -119,7 +119,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
   }
 
   void _onTabNextScreen(){
-    if(!_formKey.currentState!.validate()){
+    if(_formKey.currentState!.validate()){
       _emailVerification();
       Navigator.push(context, MaterialPageRoute(
           builder: (context) => PinVerificationScreen(email: email,)));
