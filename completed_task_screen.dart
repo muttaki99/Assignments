@@ -62,7 +62,7 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
     inProgressTaskList= false;
     setState(() {});
     if (response.isSuccess) {
-      final taskListModel = TaskListModel.fromJson(response.responseData);
+      final TaskListModel taskListModel = TaskListModel.fromJson(response.responseData);
       completedTaskList = taskListModel.taskList ?? [];
     } else {
       showSnackBar(context, response.errorMessage);
