@@ -48,7 +48,7 @@ class _CancelledTaskScreenState extends State<CancelledTaskScreen> {
     inProgressTaskList = false;
     setState(() {});
     if (response.isSuccess) {
-      final taskListModel = TaskListModel.fromJson(response.responseData);
+      final TaskListModel taskListModel = TaskListModel.fromJson(response.responseData);
       cancelledTaskList = taskListModel.taskList ?? [];
     } else {
       showSnackBar(context, response.errorMessage);
