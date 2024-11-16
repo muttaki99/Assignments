@@ -36,7 +36,6 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
         replacement: Center(
           child: CircularProgressIndicator(),
         ),
-        child: SingleChildScrollView(
           child: ListView.separated(
             itemCount: 5,
             itemBuilder: (context, index){
@@ -49,7 +48,6 @@ class _CompletedTaskScreenState extends State<CompletedTaskScreen> {
               return SizedBox(height: 8,);
             },
           ),
-        ),
       ),
     );
   }
