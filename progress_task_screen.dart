@@ -48,7 +48,7 @@ class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
     inProgressTaskList = false;
     setState(() {});
     if (response.isSuccess) {
-      final taskListModel = TaskListModel.fromJson(response.responseData);
+      final TaskListModel taskListModel = TaskListModel.fromJson(response.responseData);
       progressTaskList = taskListModel.taskList ?? [];
     } else {
       showSnackBar(context, response.errorMessage);
