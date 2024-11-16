@@ -104,7 +104,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
   List<TaskSummeryCard> _getTaskSummaryCardList(){
     List<TaskSummeryCard> taskSummeryCardList = [];
     for(TaskStatusCountModel t in _newTaskListCount){
-      taskSummeryCardList.add(TaskSummeryCard(count: t.sum!, title: t.sId!));
+      taskSummeryCardList.add(TaskSummeryCard(count: t.sum, title: t.sId));
     }
     return taskSummeryCardList;
   }
